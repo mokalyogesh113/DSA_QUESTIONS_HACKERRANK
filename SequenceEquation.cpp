@@ -6,24 +6,22 @@ using namespace std;
 
 void solve()
 {
-    int n,k,q;
-    cin>>n>>k>>q;
-    k=k%n;
+    int n;  cin>>n;
     vi v(n);
     for(int i=0;i<n;i++)
         cin>>v[i];
     
-   for(int i=0;i<q;i++)
-   {
-       int x;   cin>>x;
-       int index=abs((n-k+x))%n;
-       cout<<v[index]<<endl;
-   }
+    for(int i=0;i<n;i++)
+    {
+        int temp=find(v.begin(),v.end(),i+1)-v.begin()+1;
+        int ans=find(v.begin(),v.end(),temp)-v.begin()+1;
+        cout<<ans<<endl;
+    }
 }
 
 using namespace std;
 int main()
 {
-        solve();
+    solve();
     return 0;    
 }
