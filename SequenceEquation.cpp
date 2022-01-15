@@ -19,7 +19,6 @@ void solve()
     }
 }
 
-using namespace std;
 int main()
 {
     solve();

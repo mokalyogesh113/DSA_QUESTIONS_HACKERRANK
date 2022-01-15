@@ -6,23 +6,28 @@ using namespace std;
 
 void solve()
 {
-    int n,k,q;
-    cin>>n>>k>>q;
-    k=k%n;
+    int n,j;  cin>>n>>j;
     vi v(n);
     for(int i=0;i<n;i++)
         cin>>v[i];
     
-   for(int i=0;i<q;i++)
-   {
-       int x;   cin>>x;
-       int index=abs((n-k+x))%n;
-       cout<<v[index]<<endl;
-   }
+    int cnt=0,pos=0;
+
+    do
+    {
+        pos=(pos+j)%n;
+        cnt++;
+        if(v[pos])
+            cnt+=2;
+
+    } while (pos!=0);
+    
+    cout<<100-cnt;
 }
 
 int main()
 {
-        solve();
+   solve();
+
     return 0;    
 }

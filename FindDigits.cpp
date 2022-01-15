@@ -6,13 +6,18 @@ using namespace std;
 
 void solve()
 {
-    int n,m,s;
-    cin>>n>>m>>s;
+    int n;  cin>>n;
+    int a=n;
+    int cnt=0;
+    while(n!=0)
+    {
+        int temp=n%10;
+        n/=10;
+        if(temp!=0 && a%temp==0)
+            cnt++;
+    }
+    cout<<cnt<<endl;
 
-    int ans=(s+m-1)%n;
-    ans=ans==0 ? n : ans;
-    cout<<ans<<endl;
-    return;    
 }
 
 int main()
