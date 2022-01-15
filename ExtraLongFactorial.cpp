@@ -2,7 +2,7 @@
 #define ll long long int 
 #define vi vector<int>
 #define vll vector<long long int>
-#define max 100
+#define max 500
 using namespace std;
 
 int multiply(vi &v,int n, int res_pos)
